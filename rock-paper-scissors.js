@@ -45,22 +45,28 @@ let score =JSON.parse(localStorage.getItem('score')) || {
   
   document.querySelector('.js-reset-score-button').addEventListener('click', () => {
     document.querySelector('.js-reset-confirmation')
-      .innerHTML = 'Are you sure you want to reset the score? <button class="yes-button">Yes</button> <button class="no-button">No</button>';
+      .innerHTML = 'Are you sure you want to reset the score? <button class="yes-button js-descision-button">Yes</button> <button class="no-button js-descision-button">No</button>';
+
+      document.querySelector('.container').classList.add('reset-confirmation-container');
   
       document.querySelector('.yes-button').addEventListener('click', ()=>{
+        document.querySelector('.container').classList.remove('reset-confirmation-container');
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
         localStorage.removeItem('score');
         updateScoreElement();
         document.querySelector('.js-reset-confirmation')
-      .innerHTML = '';
+          .innerHTML = '';
+
       });
       
       document.querySelector('.no-button').addEventListener('click', ()=>{
+        document.querySelector('.container').classList.remove('reset-confirmation-container');
         document.querySelector('.js-reset-confirmation')
-      .innerHTML = '';
+        .innerHTML = '';
       });
+
       
     }); 
   
@@ -91,9 +97,12 @@ let score =JSON.parse(localStorage.getItem('score')) || {
   document.body.addEventListener('keydown',(event)=>{
     if(event.key === 'Backspace'){
       document.querySelector('.js-reset-confirmation')
-      .innerHTML = 'Are you sure you want to reset the score? <button class="yes-button">Yes</button> <button class="no-button">No</button>';
+      .innerHTML = 'Are you sure you want to reset the score? <button class="yes-button js-descision-button">Yes</button> <button class="no-button js-descision-button">No</button>';
+      document.querySelector('.container').classList.add('reset-confirmation-container');
+
   
       document.querySelector('.yes-button').addEventListener('click', ()=>{
+        document.querySelector('.container').classList.remove('reset-confirmation-container');
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
@@ -104,6 +113,7 @@ let score =JSON.parse(localStorage.getItem('score')) || {
       });
       
       document.querySelector('.no-button').addEventListener('click', ()=>{
+        document.querySelector('.container').classList.remove('reset-confirmation-container');
         document.querySelector('.js-reset-confirmation')
       .innerHTML = '';
       });
