@@ -1,12 +1,12 @@
 body{
-    background-color: rgb(25,25,25);
+    background: linear-gradient(to right, #1e293b, #0f172a);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
   .title{
     font-size: 30px;
     font-weight: bold;
@@ -18,14 +18,19 @@ body{
   }
   
   .move-button{
-    background-color: transparent;
     border: 3px solid white;
     width: 120px;
     height: 120px;
     border-radius: 60px;
     cursor: pointer;
     margin-right: 10px;
-  
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.2);  
+    background-color: #0f172a; 
+    
+  }
+  .move-button:hover{
+    border: 2px solid #60a5fa; 
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.5);  
   }
   
   .result{
@@ -37,12 +42,48 @@ body{
   
   .score{
     margin-top: 60px;
+    font-size: 17px;
+    font-weight: 500;
+    
   }
   
-  .reset-score-button, .auto-play-button {
+  .reset-score-button, .auto-play-button, .js-descision-button {
     border:none;
-    background-color: white;
-    font-size: 15px;
     padding: 8px 15px;
     cursor: pointer;
+    border-radius: 7px;
+    font-size: 16px;
+    color: white;
+    background-color: #0f172a; 
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.2);  
+  }
+
+  .reset-score-button:hover, .auto-play-button:hover, .js-descision-button:hover{
+    border: 2px solid #60a5fa; 
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.5);  
+
+  }
+
+  .js-descision-button{
+    margin-left: 15px;
+    border-radius: 7px;
+  }
+  .js-descision-button:hover{
+    color: white;
+    font-size: 16px;
+  }
+  .reset-confirmation{
+    font-size: large;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 20px auto;
+
+  }
+
+  .reset-confirmation-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #0f172a; 
   }
