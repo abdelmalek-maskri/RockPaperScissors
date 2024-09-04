@@ -1,7 +1,7 @@
 # Rock-Paper-Scissors Game
 
 Welcome to the Rock-Paper-Scissors game! This is a simple and interactive web-based game where you can play against the computer. You can also track your score and reset it as needed.
-check it out here 🤗😇 [https://myfav-rock-paper-scissors.netlify.app]
+check it out here 🤗😇 https://myfav-rock-paper-scissors.netlify.app
 
 ## Features
 
